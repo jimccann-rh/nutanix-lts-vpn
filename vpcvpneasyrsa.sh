@@ -29,8 +29,8 @@ EOF
 
 ./easyrsa init-pki
 ./easyrsa build-ca nopass
-./easyrsa build-server-full $VMWARE_VPN_NAME.$VMWARE_VPN_NAME_SERVER.vpn.prod.clientvpn.us-east-2.amazonaws.com nopass
-./easyrsa build-client-full $VMWARE_VPN_NAME.$VMWARE_VPN_NAME_CLIENT.vpn.prod.clientvpn.us-east-2.amazonaws.com nopass
+./easyrsa build-server-full $VMWARE_VPN_NAME.$VMWARE_VPN_NAME_SERVER.vpn.amazonaws.com nopass
+./easyrsa build-client-full $VMWARE_VPN_NAME.$VMWARE_VPN_NAME_CLIENT.vpn.amazonaws.com nopass
 
 #find ${easy_rsa}/keys/ -name ${now}_${ident}*.crt -o -name ${now}_${ident}*.key > /media/${now}_${ident}
 
@@ -54,6 +54,6 @@ done
 
 cd $LOCATION_CERTS
 openssl x509 -in $VMWARE_VPN_NAME.ca.crt -out $VMWARE_VPN_NAME.ca.pem -outform PEM
-openssl x509 -in $VMWARE_VPN_NAME.$VMWARE_VPN_NAME_SERVER.vpn.prod.clientvpn.us-east-2.amazonaws.com.crt -out $VMWARE_VPN_NAME.$VMWARE_VPN_NAME_SERVER.vpn.prod.clientvpn.us-east-2.amazonaws.com.pem -outform PEM
-openssl x509 -in $VMWARE_VPN_NAME.$VMWARE_VPN_NAME_CLIENT.vpn.prod.clientvpn.us-east-2.amazonaws.com.crt -out $VMWARE_VPN_NAME.$VMWARE_VPN_NAME_CLIENT.vpn.prod.clientvpn.us-east-2.amazonaws.com.pem -outform PEM
+openssl x509 -in $VMWARE_VPN_NAME.$VMWARE_VPN_NAME_SERVER.vpn.amazonaws.com.crt -out $VMWARE_VPN_NAME.$VMWARE_VPN_NAME_SERVER.vpn.amazonaws.com.pem -outform PEM
+openssl x509 -in $VMWARE_VPN_NAME.$VMWARE_VPN_NAME_CLIENT.vpn.amazonaws.com.crt -out $VMWARE_VPN_NAME.$VMWARE_VPN_NAME_CLIENT.vpn.amazonaws.com.pem -outform PEM
 #openssl x509 -noout -text -in ca.crt
