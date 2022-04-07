@@ -1,6 +1,6 @@
 # nutanix-lts-vpn
 
-Quick hack for dns certs
+Quick hack for dns certs so no judging code. :)
 
 This assume you have everything in the ovpn file, IE cert, key, ca, config. You need to provide or get the ovpn file, IE client VPC VPN from AWS/IBM.
 
