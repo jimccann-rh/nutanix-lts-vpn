@@ -16,5 +16,8 @@ nmcli connection down nutanix-lts-development-vpn
 Alternate:
 
 sudo openvpn --config ./nutanix-lts-development-vpn.ovpn
+
+new cli window:
+
 sudo resolvectl dns tun0 10.0.0.2
 
