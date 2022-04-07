@@ -2,7 +2,7 @@
 
 Quick hack for dns certs
 
-This assume you have everything in the ovpn file, IE cert, key, ca, config
+This assume you have everything in the ovpn file, IE cert, key, ca, config. You need to provide or get the ovpn file, IE client VPC VPN from AWS/IBM.
 
 Network Manager via GUI or CLI:
 
