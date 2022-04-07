@@ -29,4 +29,6 @@ else
 	echo $'</key>' | tee -a "${LOCATION_CERTS}"/"${VPN_NAME}".ovpn
 fi
 
-echo "openvpn config file ${FILE} is ready (example usage 'sudo openvpn --config ${FILE}')"
+echo -e "openvpn config file ${FILE} is ready example usage:\n'nmcli connection import type openvpn file ${FILE}'\n'nmcli connection up ${VPN_NAME}'\n'nmcli connection down ${VPN_NAME}'"
+echo -e "Alternate:\n"
+echo "openvpn config file ${FILE} is ready (example usage 'sudo openvpn --config ${FILE}' in new cli window run 'sudo resolvectl dns tun0 10.0.0.2')"
